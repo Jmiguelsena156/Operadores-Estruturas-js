@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores e estruturas de fluxo de controle</title>
+</head>
+<body>
+    <h1>Questão 4</h1>
+    <script>
+
+        function comparar(idade, possuiConvite) {
+            if (idade >= 18 && possuiConvite) {
+                console.log("Entrada permitida.");
+                console.log("Motivo: possui convite e é maior de idade.");
+            } else {
+                console.log("Entrada negada.");
+                console.log("Motivo: " + 
+                    (idade < 18 && !possuiConvite ? "é menor de idade e não possui convite" :
+                        (possuiConvite ? "menor de idade" : "não possui convite")
+                    ) 
+                );
+            }
+        }
+
+        let idade = 20;
+        let possuiConvite = false;
+        comparar(idade, possuiConvite);
+        possuiConvite = true;
+        comparar(idade, possuiConvite);
+        idade = 16;
+        comparar(idade, possuiConvite);
+        
+    </script>
+</body>
+</html>

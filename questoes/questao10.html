@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores e estruturas de fluxo de controle</title>
+</head>
+<body>
+    <h1>Questão 10</h1>
+    <script>
+        const num = parseInt(prompt("Informe um número inteiro positivo: "));
+
+        let pares = 0, impares = 0;
+
+        for (let k = 1; k <= num; k++) {
+            if (k % 2 === 0) {
+                console.log(k + " - par");
+            } else {
+                console.log(k + " - impar");
+            }
+        }
+    </script>
+</body>
+</html>

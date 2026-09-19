@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores e estruturas de fluxo de controle</title>
+</head>
+<body>
+    <h1>Questão 1</h1>
+    <script>
+        const totalItens = 47;
+        const itensPorCaixa = 6;
+        const dimensao = 4;
+
+        let Qtd_Caixas = parseInt(totalItens / itensPorCaixa), Itens_Restantes = totalItens % itensPorCaixa;
+
+        let Posicoes = dimensao ** 3;
+
+        console.log(
+            "Itens: " + totalItens +
+            "\nCaixas completas: " + Qtd_Caixas +
+            "\nItens sobrandos: " + Itens_Restantes +
+            "\nPosições no depósito: " + Posicoes
+        );
+    </script>
+</body>
+</html>

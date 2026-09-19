@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores e estruturas de fluxo de controle</title>
+</head>
+<body>
+    <h1>Questão 5</h1>
+    <script>
+        let valor_compra = Number(prompt("Informe quanto você comprou: "));
+        valor_compra = Number(valor_compra.toFixed(2));
+
+        if (valor_compra < 150) {
+            console.log("Compra de R$ " + valor_compra + " - você tem frete grátis.");
+        } else {
+            let novo_preco = valor_compra + 20;
+            console.log("Compra de R$ " + novo_preco + " - você tem R$ 20,00 de frete.");
+        }
+    </script>
+</body>
+</html>

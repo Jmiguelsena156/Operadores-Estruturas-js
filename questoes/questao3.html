@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores e estruturas de fluxo de controle</title>
+</head>
+<body>
+    <h1>Questão 3</h1>
+    <script>
+        const valor_vendido = Number(prompt("Informe o valor vendido no mês:"));
+        const meta = Number(prompt("Informe a meta estabelecida:"));
+
+        console.log("Vendido: " + valor_vendido + " | meta: " + meta);
+        let igual_meta = valor_vendido === meta;
+        let meta_alcancada = valor_vendido >= meta;
+        let meta_concluida = valor_vendido > meta;
+
+        console.log("Atingiu a meta? " + meta_alcancada);
+        console.log("Superou a meta? " + meta_concluida);
+        console.log("Bateu exatamente? " + igual_meta);
+
+        if (meta_alcancada) {
+            console.log("Diferença: " + (valor_vendido - meta));
+        } else {
+            console.log("Diferença: " + (meta - valor_vendido));
+        }
+    </script>
+</body>
+</html>

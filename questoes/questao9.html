@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores e estruturas de fluxo de controle</title>
+</head>
+<body>
+    <h1>Questão 9</h1>
+    <script>
+        let senha = "ifpb2026", tentativa;
+        let contador = 0;
+
+        do {
+            contador++;
+            tentativa = prompt("Informe a senha: ");
+        } while (tentativa !== senha);
+
+        console.log("Bem vindo! você acertou em " + contador + " tentativa(s).");
+
+        /* do while é mais útil pois precise que o usuário informe pelo menos
+        uma tentativa e depois verificar. Se colocar com while, precisa repetir
+        o código fora e dentro do while, depois a verificação é feita antes do
+        pedido.*/
+    </script>
+</body>
+</html>

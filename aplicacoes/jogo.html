@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores e estruturas de fluxo de controle</title>
+</head>
+<body>
+    <!-- Esse arquivo é só para testar o html.-->
+
+    <h1>Jogo do pedra papel e tesoura</h1>
+
+    <form action="" id="Jogo">
+        <label for="jogada">Escolha o que você deseja jogar</label>
+    
+        <select name="jogada" id="jogada">
+            <option value="1">Pedra</option>
+            <option value="2">Papel</option>
+            <option value="3">Tesoura</option>
+        </select>
+    
+        <button id="Jogar">Jogar</button>
+        <p id="Resultado"></p>
+        <p id="Dados"></p>
+    </form>
+    <script>
+        let Jogo = document.querySelector("#Jogo");
+        let Resultado = document.querySelector("#Resultado");
+        let Dados = document.querySelector("#Dados");
+
+        function ComecarJogo(e) {
+            e.preventDefault();
+            let jogada = Jogo.querySelector("#jogada");
+
+            if (e.target.id === "Jogar") {
+                let computador = Math.floor(Math.random() * 3) + 1;
+                
+                if (jogada.value == computador) {
+                    Resultado.textContent = "Empate!";
+                } else if (parseInt(jogada.value) === computador+1 || (parseInt(jogada.value) + 2 === computador)) {
+                    Resultado.textContent = "Você Ganhou!";
+                } else {
+                    Resultado.textContent = "Oponente Ganhou!";
+                }
+
+                Dados.textContent = ("Dados: ");
+                if (jogada.value == 1) {
+                    Dados.textContent += ("Você jogou Pedra");
+                } else if (jogada.value == 2) {
+                    Dados.textContent += ("Você jogou Papel");
+                } else {
+                    Dados.textContent += ("Você jogou Tesoura");
+                }
+
+                if (computador === 1) {
+                    Dados.textContent += (" e oponente jogou Pedra!");
+                } else if (computador === 2) {
+                    Dados.textContent += (" e oponente jogou Papel!");
+                } else {
+                    Dados.textContent += (" e oponente jogou Tesoura!");
+                }
+            }
+        }
+
+        Jogo.addEventListener("click", ComecarJogo); 
+    </script>
+</body>
+</html>
