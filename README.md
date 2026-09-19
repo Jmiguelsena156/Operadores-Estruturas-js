@@ -38,7 +38,7 @@
       * `condição` ? `resultado caso verdadeiro` : `resultado caso falso`;
 
 * Estruturas:
-   * Estrutura condicionais:
+   * Estruturas condicionais:
       * if / else:
          ```js
          if (condicao1) {
@@ -68,7 +68,7 @@
          }
          ```
    
-   * Estrutura condicionais:
+   * Estruturas de repetições:
       * for:
          ```js
          // for (inicialização; condição de parada; incremento)
